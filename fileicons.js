@@ -47,6 +47,8 @@
 })();
 
 var ﬁ = {};
+var fi = ﬁ;
+var fileicon = ﬁ;
 ﬁ.version = 1;
 ﬁ.boot = function(){ ﬁ.boot.done = 1; setTimeout(function(){ﬁ.scan();}, 100); };
 ﬁ.boot.done = 0;
