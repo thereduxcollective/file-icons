@@ -31,6 +31,14 @@
 		-----------------------------------------------------------------------------
 */
 
+var ﬁ = {};
+var fi = ﬁ;
+var fileicon = ﬁ;
+ﬁ.version = 'a1.0.1';
+
+ﬁ.boot = function(){ ﬁ.boot.done = 1; setTimeout(function(){ﬁ.scan();}, 100); };
+ﬁ.boot.done = 0;
+
 (function() {
 	if (document.addEventListener) {
 		document.addEventListener('DOMContentLoaded', function() { ﬁ.boot(); }, true);
@@ -46,12 +54,6 @@
 	}
 })();
 
-var ﬁ = {};
-var fi = ﬁ;
-var fileicon = ﬁ;
-ﬁ.version = 'a1.0.1';
-ﬁ.boot = function(){ ﬁ.boot.done = 1; setTimeout(function(){ﬁ.scan();}, 100); };
-ﬁ.boot.done = 0;
 if (document.registerElement) {
 	ﬁ.tag = document.registerElement('file-icon');
 	ﬁ.regiseter = function(){if (ﬁ.boot.done) {document.body.appendChild(new ﬁ.tag()); console.log('ﬁ registered');} else { setTimeout(function(){ﬁ.regiseter();}, 10); }}; /* register the "file-icon" tag with HTML Parser */
