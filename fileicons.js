@@ -89,25 +89,27 @@ if (document.registerElement) {
 };
 ﬁ.render.icon = function(type, size, label, grid) {
 	/* contains basic icon elements */
-	var ic = {};
-	ic.typeArray = type.split(' ');
-	ic.typeResult = ic.typeArray.splice(0, 1);
-	ic.typeResult.push(ic.typeArray.join(' '));
-	ic.code = '';
-	
-	if (typeof ﬁ.code !== 'undefined' && typeof ﬁ.code[ic.typeResult[0]] !== 'undefined') {
-		ic.code += '<div class="Fi_fileIcon '+size+'">';
-			if (grid) {
-				ic.code += '<div class="layout_grid"><div class="l h1"></div><div class="l h2"></div><div class="l v1"></div><div class="l v2"></div></div>';
-			}
-			ic.code += '<div class="icon_content '+type+'">';
-				ic.code += ﬁ.code[ic.typeResult[0]](ic.typeResult[1], label); /* fetch additional code specific to icon subtype */
-			ic.code += '</div>';
-		ic.code += '</div>';
+	if (type) {
+		var ic = {};
+		ic.typeArray = type.split(' ');
+		ic.typeResult = ic.typeArray.splice(0, 1);
+		ic.typeResult.push(ic.typeArray.join(' '));
+		ic.code = '';
 		
-		return ic.code;
-	} else {
-		return 0;
+		if (typeof ﬁ.code !== 'undefined' && typeof ﬁ.code[ic.typeResult[0]] !== 'undefined') {
+			ic.code += '<div class="Fi_fileIcon '+size+'">';
+				if (grid) {
+					ic.code += '<div class="layout_grid"><div class="l h1"></div><div class="l h2"></div><div class="l v1"></div><div class="l v2"></div></div>';
+				}
+				ic.code += '<div class="icon_content '+type+'">';
+					ic.code += ﬁ.code[ic.typeResult[0]](ic.typeResult[1], label); /* fetch additional code specific to icon subtype */
+				ic.code += '</div>';
+			ic.code += '</div>';
+			
+			return ic.code;
+		} else {
+			return 0;
+		}
 	}
 };
 ﬁ.scan = function() {
