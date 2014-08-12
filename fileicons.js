@@ -77,12 +77,12 @@ if (document.registerElement) {
 				icon.code = ﬁ.render.icon(icon.type, icon.size, icon.label, icon.grid); /* retrieve the icon code for file type */
 				
 				if (icon.code !== 0) {
-					ﬁEles[i].innerHTML = icon.code /* inserts icon code into file-icon tag */
+					ﬁEles[i].innerHTML = icon.code; /* inserts icon code into file-icon tag */
 					ﬁEles[i].setAttribute('data-rendered', '1');
 				} else {
 					/* Use the 'unknown' icon if the file type is not defined, do not set the rendered attribute as the file type could be added later */
 					icon.code = ﬁ.render.icon('file unknown', icon.size, '?', icon.grid);
-					ﬁEles[i].innerHTML = icon.code
+					ﬁEles[i].innerHTML = icon.code;
 					/* console.log('ﬁ type: "'+icon.type+'" not defined'); */
 				}
 			}
@@ -206,10 +206,10 @@ if (document.registerElement) {
 	
 	/* File Icons */
 		ﬁ.code.file = function(subtype, label) {
+			var rootType = '';
+			var labelType = '';
 			if (typeof subtype !== 'undefined') {
 				var stArray = subtype.split(' ');
-				var rootType = '';
-				var labelType = '';
 				if (stArray.length > 1) {
 					rootType = stArray[0];
 					labelType = stArray[1];
