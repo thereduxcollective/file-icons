@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>File Icons</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script src="fileicons.js" type="text/javascript"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="fileicons.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<div class="header">File Icon Library: An Open-source, CSS &amp; JavaScript Rendered Icon Library<div class="version">Alpha 1</div></div>
+	<div class="container">
+		<div class="box">
+			<div class="title text">What is the File Icon Library?</div>
+			<div class="content text">The File Icon Library is an open-source library of icons rendered using only CSS and JavaScript. There are no image files used in any of the icons, thus minimizing the loading time of a webpage.</div>
+			<div class="title text">What browsers support the File Icon Library?</div>
+			<div class="content text">As this is an ALPHA release, we cannot guarantee 100% compatibility with all browsers. The browsers we have tested in that support the File Icon Library include:
+				<ul>
+					<li>Chrome 36 - 100% - all features are supported</li>
+					<li>Safari 8 - 95% - doesn&rsquo;t support <code>document.registerElement</code>, but this doesn&rsquo;t affect rendering</li>
+					<li>Internet Explorer 11.0.9 - 95% - doesn&rsquo;t support <code>document.registerElement</code>, but this doesn&rsquo;t affect rendering</li>
+					<li>Firefox 31 - 90% - has issues rendering certain icons (MS Office Icons)</li>
+					<li>Opera 12.16 - 80% - has issues with icon layout</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title text">Icon Examples</div>
+			<div class="content">
+				<div class="icon_box"><div class="icon"><file-icon data-type="adobe aep" data-size="medium"></file-icon></div><div class="label">After Effects Project</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="adobe fla" data-size="medium"></file-icon></div><div class="label">Flash File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="adobe ai" data-size="medium"></file-icon></div><div class="label">Illustrator Document</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="adobe psd" data-size="medium"></file-icon></div><div class="label">Photoshop Document</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="adobe indd" data-size="medium"></file-icon></div><div class="label">InDesign Document</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="adobe prproj" data-size="medium"></file-icon></div><div class="label">Premier Project</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file pdf" data-size="medium"></file-icon></div><div class="label">PDF File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file cad" data-size="medium"></file-icon></div><div class="label">CAD File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file docx" data-size="medium"></file-icon></div><div class="label">Word Document</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file xlsx" data-size="medium"></file-icon></div><div class="label">Excel Spreadsheet</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file pptx" data-size="medium"></file-icon></div><div class="label">PowerPoint Presentation</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file pages" data-size="medium"></file-icon></div><div class="label">Pages Document</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file keynote" data-size="medium"></file-icon></div><div class="label">Keynote Presentation</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file numbers" data-size="medium"></file-icon></div><div class="label">Numbers Spreadsheet</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file qlab" data-size="medium"></file-icon></div><div class="label">QLab File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file torrent" data-size="medium"></file-icon></div><div class="label">Torrent File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="unknown" data-size="medium"></file-icon></div><div class="label">Unknown File Type</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file vector" data-size="medium"></file-icon></div><div class="label">Vector File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="file" data-size="medium" data-label="text"></file-icon></div><div class="label">Basic File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="folder" data-size="medium"></file-icon></div><div class="label">Folder</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="image jpg" data-size="medium"></file-icon></div><div class="label">Image File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="audio flac" data-size="medium"></file-icon></div><div class="label">Audio File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="video mp4" data-size="medium"></file-icon></div><div class="label">Video File</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="archive zip" data-size="medium"></file-icon></div><div class="label">Zip Archive</div></div>
+				<div class="icon_box"><div class="icon"><file-icon data-type="dmg" data-size="medium"></file-icon></div><div class="label">Disk Image</div></div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="title text">The Code</div>
+			<div class="content text">
+				A custom HTML tag <code>&lt;file-icon&gt;&lt;/file-icon&gt;</code> is used to render file icons.
+				<br/>
+				<br/>
+				Parameters:
+				<br/>
+				<code>(note: &lt; &gt; required parameter, [ ] optional parameter)</code>
+				<ul>
+					<li><code>data-type: &lt;type [subtype]&gt; <a href="#typelist">type list</a></code></li>
+					<li><code>data-size: &lt;xlarge&gt;|&lt;large&gt;|&lt;medium&gt;|&lt;small&gt;|&lt;tiny&gt;|&lt;micro&gt;</code></li>
+					<li><code>data-label: [label]</code> - will default to subtype label if available</li>
+					<li><code>data-rendered: boolean</code> - set by the render engine</li>
+				</ul>
+				<br/>
+				<br/>
+				Example Code:<br/>
+				<code>&lt;file-icon data-type="file pdf" data-size="medium"&gt;&lt;/file-icon&gt;</code>
+				<br/>
+				<br/>
+				Live Demo:<br/>
+				<file-icon data-type="file pdf" data-size="medium"></file-icon>
+			</div>
+		</div>
+		<div id="typelist" class="box">
+			<div class="title text">File Type List</div>
+			<div clas="content text">
+				<ul>
+					<li>
+						<code>adobe</code>
+						<ul>
+							<li><code>aep</code> - After Effects Project</li>
+							<li><code>ai</code> - Illustrator Doucment</li>
+							<li><code>fla</code> - Flash File</li>
+							<li><code>psd</code> - Photoshop Document</li>
+							<li><code>indd</code> - InDesign Document</li>
+							<li><code>prproj</code> - Premier Project</li>
+						</ul>
+					</li>
+					<li>
+						<code>archive</code>
+						<ul>
+							<li><code>air</code> - Adobe Air</li>
+							<li><code>tar</code></li>
+							<li><code>zip</code></li>
+						</ul>
+					</li>
+					<li>
+						<code>audio</code>
+						<ul>
+							<li><code>aac</code></li>
+							<li><code>aif</code></li>
+							<li><code>aiff</code></li>
+							<li><code>alac</code></li>
+							<li><code>ape</code></li>
+							<li><code>flac</code></li>
+							<li><code>m4a</code></li>
+							<li><code>mp2</code></li>
+							<li><code>mp3</code></li>
+							<li><code>mp4</code></li>
+							<li><code>mxf</code></li>
+							<li><code>ogg</code></li>
+							<li><code>omf</code></li>
+							<li><code>pcm</code></li>
+							<li><code>raw</code></li>
+							<li><code>r3d</code></li>
+							<li><code>wav</code></li>
+							<li><code>webm</code></li>
+						</ul>
+					</li>
+					<li>
+						<code>dmg</code> - Disk Image [default]
+						<ul>
+							<li><code>iso</code> - ISO File</li>
+						</ul>
+					</li>
+					<li>
+						<code>file</code> - (allows for two subtypes, defaults to first)
+						<ul>
+							<li>
+								<code>cad</code> - Computer Aided Drafting File
+								<ul>
+									<li><code>3ds</code></li>
+									<li><code>cel</code></li>
+									<li><code>dfwx</code></li>
+									<li><code>dgn</code></li>
+									<li><code>dwf</code></li>
+									<li><code>dwg</code></li>
+									<li><code>mdl</code></li>
+									<li><code>mdx</code></li>
+									<li><code>off</code></li>
+									<li><code>ply</code></li>
+									<li><code>prc</code></li>
+									<li><code>skp</code> - Sketchup</li>
+									<li><code>stl</code></li>
+									<li><code>vwx</code> - VectorWorks</li>
+								</ul>
+							</li>
+							<li><code>docx</code> - Microsoft Word Document</li>
+							<li><code>keynote</code> - Apple iWork Keynote Presentation</li>
+							<li><code>numbers</code> - Apple iWork Numbers Spreadsheet</li>
+							<li><code>pages</code> - Apple iWork Pages Document</li>
+							<li><code>pdf</code> - Portable Document Format</li>
+							<li><code>pptx</code> - Microsoft PowerPoint Presentation</li>
+							<li><code>qlab</code> - QLab File</li>
+							<li><code>torrent</code> - Torrent File</li>
+							<li><code>xlsx</code> - Microsoft Excel Document</li>
+							<li>
+								<code>vector</code> - Vector File
+								<ul>
+									<li><code>drw</code></li>
+									<li><code>dxf</code></li>
+									<li><code>eps</code></li>
+									<li><code>pat</code></li>
+									<li><code>svg</code></li>
+									<li><code>vsd</code></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<code>folder</code>
+					</li>
+					<li>
+						<code>image</code>
+						<ul>
+							<li><code>bmp</code></li>
+							<li><code>dcm</code></li>
+							<li><code>gif</code></li>
+							<li><code>iff</code></li>
+							<li><code>jpf</code></li>
+							<li><code>jpg</code></li>
+							<li><code>mpo</code></li>
+							<li><code>pbm</code></li>
+							<li><code>pcx</code></li>
+							<li><code>png</code></li>
+							<li><code>pxr</code></li>
+							<li><code>raw</code></li>
+							<li><code>sct</code></li>
+							<li><code>tga</code></li>
+							<li><code>tif</code></li>
+							<li><code>tiff</code></li>
+						</ul>
+					</li>
+					<li>
+						<code>video</code>
+						<ul>
+							<li><code>avi</code></li>
+							<li><code>flv</code></li>
+							<li><code>m4v</code></li>
+							<li><code>mkv</code></li>
+							<li><code>mov</code></li>
+							<li><code>mp4</code></li>
+							<li><code>mts</code></li>
+							<li><code>ogg</code></li>
+							<li><code>webm</code></li>
+							<li><code>wmv</code></li>
+							<li><code>veg</code></li>
+							<li><code>vf</code></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
