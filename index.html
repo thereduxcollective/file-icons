@@ -23,6 +23,8 @@
 					<li>Opera 12.16 - 80% - has issues with icon layout</li>
 				</ul>
 			</div>
+			<div class="title text">Where do I download the File Icon Library?</div>
+			<div class="content">Why, on <a href="https://github.com/thereduxcollective/file-icons" target="_blank">GitHub</a> of course!</div>
 		</div>
 		<div class="box">
 			<div class="title text">Icon Examples</div>
@@ -62,12 +64,13 @@
 				<br/>
 				Parameters:
 				<br/>
-				<code>(note: &lt; &gt; required parameter, [ ] optional parameter)</code>
+				<code>(note: &lt; &gt; required parameter, [ ] optional parameter, { } set by engine)</code>
 				<ul>
-					<li><code>data-type: &lt;type [subtype]&gt; <a href="#typelist">type list</a></code></li>
-					<li><code>data-size: &lt;xlarge&gt;|&lt;large&gt;|&lt;medium&gt;|&lt;small&gt;|&lt;tiny&gt;|&lt;micro&gt;</code></li>
+					<li><code>data-grid: [boolean]</code> - overlays a grid, used for icon design and alignment</li>
 					<li><code>data-label: [label]</code> - will default to subtype label if available</li>
-					<li><code>data-rendered: boolean</code> - set by the render engine</li>
+					<li><code>data-rendered: {boolean}</code> - set by the render engine</li>
+					<li><code>data-size: &lt;xlarge&gt;|&lt;large&gt;|&lt;medium&gt;|&lt;small&gt;|&lt;tiny&gt;|&lt;micro&gt;</code></li>
+					<li><code>data-type: &lt;type [subtype]&gt; <a href="#typelist">type list</a></code></li>
 				</ul>
 				<br/>
 				<br/>
